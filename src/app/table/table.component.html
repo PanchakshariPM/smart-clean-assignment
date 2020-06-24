@@ -1,0 +1,35 @@
+<div class="mat-elevation-z8 table-responsive my-3">
+  <table class="m-0" mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="dom">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dom </th>
+      <td mat-cell *matCellDef="let row"> {{row.dom}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dow">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dow </th>
+      <td mat-cell *matCellDef="let row"> {{row.dow}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="insid">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Insid </th>
+      <td mat-cell *matCellDef="let row" [style.color]="row.insid"> {{row.insid}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hour">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Hour </th>
+      <td mat-cell *matCellDef="let row" [style.color]="row.hour"> {{row.hour}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="SumHourly">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Sum Hourly </th>
+      <td mat-cell *matCellDef="let row"> {{row.SumHourly}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[9,15, 20]"></mat-paginator>
+</div>

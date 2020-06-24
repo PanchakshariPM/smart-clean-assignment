@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12">
+        <mat-toolbar class="mat-elevation-z8">
+            <mat-toolbar-row><span><img class="logo-height" src="../../assets/smartClean.png" alt="logo"></span>
+                <span class="mx-auto">
+                    <div class="btn-group">
+                        <button type="button" *ngFor="let view of dataView; let i = index" class="btn btn-secondary"
+                            (click)="typeOfview(view, i)"
+                            [ngClass]="[i == isSelected ? 'button-active' : 'button-standard']">{{ view }}</button>
+                    </div>
+                </span>
+                <button class="cursor-pointer" mat-mini-fab color="primary" matTooltip="Logout" routerLink="/login">
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+</div>

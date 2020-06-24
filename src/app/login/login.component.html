@@ -1,0 +1,31 @@
+<div class="auth-layout-wrap" style="background-image: url(../assets/bg.png)">
+    <div class="auth-content">
+        <div class="card o-hidden shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="row m-0">
+                <div class="col-12">
+                    <div class="row"> <img class="logo-height" src="../../assets/smartClean.png" alt="logo"> </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <form [formGroup]="loginForm" autocomplete="off">
+                                <div class="form-group">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Email ID</mat-label><input autocomplete="off" matInput
+                                            placeholder="Enter Email ID" formControlName="emailId">
+                                    </mat-form-field>
+                                </div>
+                                <div class="form-group">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Password</mat-label><input type="password" autocomplete="off"
+                                            matInput placeholder="Enter Password" formControlName="password">
+                                    </mat-form-field>
+                                </div>
+                                <button class="w-100" mat-raised-button color="primary" [disabled]="!loginForm.valid"
+                                    (click)="login()">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
